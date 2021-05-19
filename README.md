@@ -27,7 +27,7 @@ If you want to generate the application only for windows, please modify in the p
 ```json
 electron-builder -mw
 ```
-en
+to
 ```json
 electron-builder -w
 ```
