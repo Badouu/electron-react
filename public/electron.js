@@ -10,7 +10,14 @@ let mainWindow;
 
 function createWindow() {
   // Define the applications dimension
-  mainWindow = new BrowserWindow({ width: 900, height: 680 });
+  mainWindow = new BrowserWindow({
+    width: 900,
+    height: 680,
+    webPreferences: {
+      nodeIntegration: true,
+      contextIsolation: false,
+      enableRemoteModule: true,
+  }});
   // Determine what to render based on environment
   mainWindow.loadURL(
     isDev
@@ -33,7 +40,7 @@ app.on("window-all-closed", () => {
   if (process.platform !== "linux") {
       // If os not linux, close the app
       // you can add darwin(mac os), win64 and so many more
-    app.quit();
+    // app.quit();
   }
 });
 

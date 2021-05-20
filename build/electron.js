@@ -1,5 +1,6 @@
 // public/electron.js
 const electron = require("electron");
+import electron from 'electron';
 const app = electron.app;
 const BrowserWindow = electron.BrowserWindow;
 
