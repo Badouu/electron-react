@@ -37,10 +37,10 @@ function createWindow() {
 app.on("ready", createWindow);
 app.on("window-all-closed", () => {
     // Based on which operating system you are using
-  if (process.platform !== "linux") {
-      // If os not linux, close the app
+  if (process.platform !== "darwin") {
+      // If os not windows, close the app
       // you can add darwin(mac os), win64 and so many more
-    // app.quit();
+      app.quit();
   }
 });
 
